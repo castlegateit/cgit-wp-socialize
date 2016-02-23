@@ -9,6 +9,8 @@ class Share extends WP_Widget
 {
     /**
      * Register widget
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -22,6 +24,10 @@ class Share extends WP_Widget
 
     /**
      * Display widget content
+     *
+     * @param array $args Widget parameters
+     * @param array $instance Widget instance parameters
+     * @return void
      */
     public function widget($args, $instance)
     {
@@ -59,6 +65,9 @@ class Share extends WP_Widget
      * value and the default should be false. If the form has just been created
      * (i.e. this is a new widget), the default is true and so all links will be
      * included in the list.
+     *
+     * @param array $instance Widget instance parameters
+     * @return void
      */
     public function form($instance)
     {

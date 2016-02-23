@@ -6,6 +6,8 @@ class Socialize
 {
     /**
      * Default supported social networks
+     *
+     * @var array
      */
     private $defaultNetworks = [
         'digg' => 'Digg',
@@ -20,16 +22,22 @@ class Socialize
 
     /**
      * Social networks for this instance
+     *
+     * @var array
      */
     private $networks;
 
     /**
      * Social network URLs for this instance
+     *
+     * @var array
      */
     private $links;
 
     /**
      * Page details
+     *
+     * @var string
      */
     private $url;
     private $title;
@@ -41,6 +49,9 @@ class Socialize
      * Set the list of networks for this instance to the specified list of
      * networks, or the default list if no list is supplied. Set the URL, title,
      * and text based on the page or site information from WordPress.
+     *
+     * @param array|bool $networks Array of network keys
+     * @return void
      */
     public function __construct($networks = false)
     {
@@ -55,6 +66,9 @@ class Socialize
      * Get property
      *
      * Provide read-only access to certain private properties.
+     *
+     * @param $property
+     * @return mixed
      */
     public function __get($property)
     {
@@ -69,6 +83,8 @@ class Socialize
      *
      * If this is a single post (or custom post type) or a page, use the page
      * URL, title, and excerpt. Otherwise, use the site URL, title, and excerpt.
+     *
+     * @return void
      */
     private function setDefaults()
     {
@@ -85,6 +101,9 @@ class Socialize
 
     /**
      * Set URL
+     *
+     * @param string $url URL to share
+     * @return void
      */
     public function setUrl($url)
     {
@@ -93,6 +112,9 @@ class Socialize
 
     /**
      * Set title
+     *
+     * @param string $title Page title to share
+     * @return void
      */
     public function setTitle($title)
     {
@@ -101,6 +123,9 @@ class Socialize
 
     /**
      * Set text
+     *
+     * @param string $text Page excerpt to share (if possible)
+     * @return void
      */
     public function setText($text)
     {
@@ -112,6 +137,8 @@ class Socialize
      *
      * Update the array of links based on the current state of the array of
      * social networks.
+     *
+     * @return void
      */
     private function updateLinks()
     {
@@ -130,6 +157,8 @@ class Socialize
      * Get links
      *
      * Return an associative array of social network URLs.
+     *
+     * @return array
      */
     public function getLinks()
     {
@@ -143,6 +172,9 @@ class Socialize
      *
      * Update the list of social networks for this instance. If a network is not
      * present in the array of default networks, it will be ignored.
+     *
+     * @param array $networks
+     * @return void
      */
     public function setNetworks($networks)
     {
@@ -164,6 +196,8 @@ class Socialize
 
     /**
      * Render list of HTML links
+     *
+     * @return string
      */
     public function render()
     {
@@ -182,6 +216,8 @@ class Socialize
 
     /**
      * Return Digg URL
+     *
+     * @return string
      */
     private function getDigg()
     {
@@ -191,6 +227,8 @@ class Socialize
 
     /**
      * Return Facebook URL
+     *
+     * @return string
      */
     private function getFacebook()
     {
@@ -199,6 +237,8 @@ class Socialize
 
     /**
      * Return Google+ URL
+     *
+     * @return string
      */
     private function getGoogle()
     {
@@ -207,6 +247,8 @@ class Socialize
 
     /**
      * Return LinkedIn URL
+     *
+     * @return string
      */
     private function getLinkedin()
     {
@@ -216,6 +258,8 @@ class Socialize
 
     /**
      * Return Pinterest URL
+     *
+     * @return string
      */
     private function getPinterest()
     {
@@ -225,6 +269,8 @@ class Socialize
 
     /**
      * Return Reddit URL
+     *
+     * @return string
      */
     private function getReddit()
     {
@@ -234,6 +280,8 @@ class Socialize
 
     /**
      * Return Tumblr URL
+     *
+     * @return string
      */
     private function getTumblr()
     {
@@ -243,6 +291,8 @@ class Socialize
 
     /**
      * Return Twitter URL
+     *
+     * @return string
      */
     private function getTwitter()
     {
