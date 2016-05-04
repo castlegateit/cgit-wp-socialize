@@ -11,6 +11,7 @@ class Socialize
      */
     private $defaultNetworks = [
         'digg' => 'Digg',
+        'email' => 'Email',
         'facebook' => 'Facebook',
         'google' => 'Google+',
         'linkedin' => 'LinkedIn',
@@ -223,6 +224,16 @@ class Socialize
     {
         return 'http://digg.com/submit?url=' . $this->url . '&title='
             . $this->title;
+    }
+
+    /**
+     * Return email link
+     *
+     * @return string
+     */
+    private function getEmail()
+    {
+        return 'mailto:?subject=' . $this->title . '&body=' . $this->url;
     }
 
     /**
