@@ -1,0 +1,76 @@
+/* Widgets */
+
+.widget_cgit_socialize_share ul {
+    padding: 0;
+}
+
+.widget_cgit_socialize_share ul li {
+    list-style-type: none;
+}
+
+/* Embedded SVG icons */
+
+[class^="cgit-socialize-"] svg {
+    box-sizing: border-box;
+    height: 64px;
+    padding: 8px;
+    width: 64px;
+}
+
+.cgit-socialize-digg svg,
+.cgit-socialize-email svg,
+.cgit-socialize-instapaper svg {
+    border: 1px solid #000;
+    fill: #000;
+    background-color: #fff;
+}
+
+.cgit-socialize-evernote svg {
+    fill: #fff;
+    background-color: #2dbe60;
+}
+
+.cgit-socialize-facebook svg {
+    fill: #fff;
+    background-color: #3b5998;
+}
+
+.cgit-socialize-google svg {
+    fill: #fff;
+    background-color: #e65148;
+}
+
+.cgit-socialize-linkedin svg {
+    fill: #fff;
+    background-color: #0077b5;
+}
+
+.cgit-socialize-pinterest svg {
+    fill: #fff;
+    background-color: #bd081c;
+}
+
+.cgit-socialize-pocket svg {
+    fill: #fff;
+    background-color: #ee4056;
+}
+
+.cgit-socialize-reddit svg {
+    fill: #fff;
+    background-color: #ff4500;
+}
+
+.cgit-socialize-tumblr svg {
+    fill: #fff;
+    background-color: #36465d;
+}
+
+.cgit-socialize-twitter svg {
+    fill: #fff;
+    background-color: #2caae1;
+}
+
+.cgit-socialize-whatsapp svg {
+    fill: #fff;
+    background-color: #00e676;
+}
