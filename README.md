@@ -117,4 +117,7 @@ Icons from [Mui Social](http://linhpham.me/social/):
 
 ## Changes since version 2.0
 
-Version 2.0 is a complete rewrite of the Socialize plugin and is not backward compatible with version 1.x. If you upgrade the plugin, you will need to change your custom plugins and themes to work with version 2.0.
+Version 2.0 is a complete rewrite of the Socialize plugin and is not backward compatible with previous versions. If you want to upgrade from version 1.x, you have two options:
+
+*   Update your theme or plugin code to use the new class and methods.
+*   Switch to the `Cgit\Socialize\Legacy` class, which attempts to be a drop-in replacement for the 1.x class and its methods.
