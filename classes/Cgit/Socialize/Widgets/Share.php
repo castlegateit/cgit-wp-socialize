@@ -59,7 +59,7 @@ class Share extends WP_Widget
                 . $args['after_title'];
         }
 
-        echo $socialize->getLinks($network_args);
+        echo $socialize->renderNetworks($network_args);
         echo $args['after_widget'];
     }
 

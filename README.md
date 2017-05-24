@@ -23,7 +23,7 @@ The `\Cgit\Socialize` class creates social sharing links. For pages and single p
 ~~~ php
 $socialize = new \Cgit\Socialize();
 $foo = $socialize->getNetworks(); // array, including URLs
-$bar = $socialize->getLinks(); // HTML list of links
+$bar = $socialize->renderNetworks(); // HTML list of links
 ~~~
 
 ## Customization
@@ -55,7 +55,7 @@ You can also choose which networks to return on output:
 
 ~~~ php
 $foo = $socialize->getNetworks(['digg', 'reddit']);
-$bar = $socialize->getLinks([
+$bar = $socialize->renderNetworks([
     'networks' => ['digg', 'reddit'],
 ]);
 ~~~
@@ -67,7 +67,7 @@ Note that you can return a list of all available networks with the `getAvailable
 The generated HTML links can include just text (default), icons, or text and icons:
 
 ~~~ php
-$foo = $socialize->getLinks([
+$foo = $socialize->renderNetworks([
     'icons' => true, // use icons
     'embed' => true, // embed SVG icons
     'captions' => true, // include text after each icon
@@ -85,7 +85,7 @@ $foo = $socialize->getLinks([
 
 ## Widget
 
-The plugin also provides a widget that has the same options for choosing the networks to display and what to include in the output (text, icons, or both). The widget uses the `getLinks()` method to render the HTML links.
+The plugin also provides a widget that has the same options for choosing the networks to display and what to include in the output (text, icons, or both). The widget uses the `renderNetworks()` method to render the HTML links.
 
 ## Default CSS
 

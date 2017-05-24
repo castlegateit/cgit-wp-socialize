@@ -291,7 +291,7 @@ class Socialize
      * @param array $args
      * @return string
      */
-    public function getLinks($args = [])
+    public function renderNetworks($args = [])
     {
         // Default method arguments
         $args = wp_parse_args($args, [
