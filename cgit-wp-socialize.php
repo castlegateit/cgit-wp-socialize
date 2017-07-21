@@ -5,18 +5,19 @@
 Plugin Name: Castlegate IT WP Socialize
 Plugin URI: http://github.com/castlegateit/cgit-wp-socialize
 Description: Simple social network sharing URLs, links, and widgets.
-Version: 2.0
+Version: 2.1
 Author: Castlegate IT
 Author URI: http://www.castlegateit.co.uk/
 License: MIT
 
 */
 
-// Constants
-define('CGIT_SOCIALIZE_PLUGIN', __FILE__);
+if (!defined('ABSPATH')) {
+    wp_die('Access denied');
+}
 
-// Load plugin
 require_once __DIR__ . '/classes/autoload.php';
 
-// Initialization
-\Cgit\Socialize\Plugin::getInstance();
+$plugin = new \Cgit\Socialize\Plugin();
+
+do_action('cgit_socialize_loaded');

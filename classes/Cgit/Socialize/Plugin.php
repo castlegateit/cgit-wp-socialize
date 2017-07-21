@@ -5,35 +5,14 @@ namespace Cgit\Socialize;
 class Plugin
 {
     /**
-     * Singleton instance
-     *
-     * @var self
-     */
-    private static $instance;
-
-    /**
-     * Private constructor
+     * Constructor
      *
      * @return void
      */
-    private function __construct()
+    public function __construct()
     {
         add_action('widgets_init', [$this, 'registerWidgets']);
         add_action('wp_enqueue_scripts', [$this, 'registerScripts']);
-    }
-
-    /**
-     * Return the singleton instance
-     *
-     * @return self
-     */
-    public static function getInstance()
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new self;
-        }
-
-        return self::$instance;
     }
 
     /**
