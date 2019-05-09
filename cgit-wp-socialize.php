@@ -8,7 +8,7 @@ Description: Simple social network sharing URLs, links, and widgets.
 Version: 2.2
 Author: Castlegate IT
 Author URI: http://www.castlegateit.co.uk/
-License: MIT
+License: AGPL
 
 */
 
