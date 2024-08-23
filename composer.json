@@ -1,0 +1,8 @@
+{
+    "name": "castlegate/cgit-wp-socialize",
+    "autoload": {
+        "psr-4": {
+            "Castlegate\\Socialize\\": "classes"
+        }
+    }
+}

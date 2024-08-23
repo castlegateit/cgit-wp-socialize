@@ -1,25 +1,23 @@
 <?php
 
-/*
-
-Plugin Name: Castlegate IT WP Socialize
-Plugin URI: http://github.com/castlegateit/cgit-wp-socialize
-Description: Simple social network sharing URLs, links, and widgets.
-Version: 2.2.3
-Author: Castlegate IT
-Author URI: http://www.castlegateit.co.uk/
-License: MIT
-
-*/
+/**
+ * Plugin Name:  Castlegate IT WP Socialize
+ * Plugin URI:   https://github.com/castlegateit/cgit-wp-socialize
+ * Description:  Simple social network sharing URLs.
+ * Version:      3.0.0
+ * Requires PHP: 8.2
+ * Author:       Castlegate IT
+ * Author URI:   https://www.castlegateit.co.uk/
+ * License:      MIT
+ * Update URI:   https://github.com/castlegateit/cgit-wp-socialize
+ */
 
 if (!defined('ABSPATH')) {
     wp_die('Access denied');
 }
 
-define('CGIT_SOCIALIZE_PLUGIN', __FILE__);
+define('CGIT_WP_SOCIALIZE_VERSION', '3.0.0');
+define('CGIT_WP_SOCIALIZE_PLUGIN_FILE', __FILE__);
+define('CGIT_WP_SOCIALIZE_PLUGIN_DIR', __DIR__);
 
-require_once __DIR__ . '/classes/autoload.php';
-
-$plugin = new \Cgit\Socialize\Plugin();
-
-do_action('cgit_socialize_loaded');
+require_once __DIR__ . '/vendor/autoload.php';
