@@ -214,7 +214,7 @@ class Socialize
             $link = $this->getNetworkLink($key, $icons);
 
             if ($link) {
-                $links[] = $link;
+                $links[$key] = $link;
             }
         }
 
