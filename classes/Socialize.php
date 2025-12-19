@@ -110,7 +110,7 @@ class Socialize
      * @param bool $auto Get content from current post ID
      * @return void
      */
-    public function __construct(int $post_id = null, bool $auto = false)
+    public function __construct(?int $post_id = null, bool $auto = false)
     {
         if (!is_null($post_id)) {
             $this->post($post_id);
